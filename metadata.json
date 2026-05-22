@@ -1,0 +1,6 @@
+{
+  "name": "Aulia Cake Cookies Chatbot",
+  "description": "Asisten virtual interaktif dan ramah untuk membantu pelanggan Aulia Cake Cookies dalam mencari kue basah, kue kering premium, hampers, dan info pemesanan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

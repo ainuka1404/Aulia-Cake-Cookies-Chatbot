@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulia Cake Cookies - Asisten Virtual</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container" id="app">
+        <!-- Sidebar: Product Catalog & Brand Story -->
+        <aside class="sidebar" id="sidebar">
+            <div class="brand-header">
+                <span class="brand-tag">Premium Bakery</span>
+                <h1 class="brand-title">Aulia Cake <span class="alt-font">&</span> Cookies</h1>
+                <p class="brand-subtitle">Freshly baked daily, crafted with pure butter & love. ✨</p>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="section-title"><i data-lucide="cookie" class="icon"></i> Signature Menu</h3>
+                <div class="menu-list">
+                    <div class="menu-item inline-info" id="btn-nastar">
+                        <span class="bullet">⭐</span>
+                        <div>
+                            <strong>Nastar Premium</strong>
+                            <p class="desc">Lumer di mulut dengan nanas manis buatan sendiri (selai kustom) & aroma mentega premium.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item inline-info" id="btn-kastengel">
+                        <span class="bullet">⭐</span>
+                        <div>
+                            <strong>Kastengel Gurih</strong>
+                            <p class="desc">Keju Edam & Kraft melimpah, renyah gurih, lumer seketika.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item inline-info" id="btn-snackbox">
+                        <span class="bullet">📦</span>
+                        <div>
+                            <strong>Custom Snack Box</strong>
+                            <p class="desc">Isi kue basah & asin premium untuk arisan, rapat, and gathering. Sesuai budget.</p>
+                        </div>
+                    </div>
+                    <div class="menu-item inline-info" id="btn-hampers">
+                        <span class="bullet">🎁</span>
+                        <div>
+                            <strong>Hampers Hari Raya</strong>
+                            <p class="desc">Kotak hias cantik elegan untuk bingkisan Lebaran, Natal, & Imlek.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="section-title"><i data-lucide="map-pin" class="icon"></i> Informasi Kontak</h3>
+                <div class="contact-card">
+                    <div class="contact-row">
+                        <i data-lucide="navigation"></i>
+                        <span>Perumahan De Farda D5, Keboananom, Gedangan, Sidoarjo</span>
+                    </div>
+                    <a href="https://wa.me/628975625700" target="_blank" class="wa-link" id="wa-connect-btn">
+                        <i data-lucide="phone"></i>
+                        <span>WhatsApp: 08975625700</span>
+                    </a>
+                    <div class="social-row">
+                        <a href="https://instagram.com/AuliaCakeCookies" target="_blank" title="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="#" target="_blank" title="TikTok"><i data-lucide="music-2"></i></a>
+                        <a href="#" target="_blank" title="YouTube"><i data-lucide="youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="sidebar-footer">
+                <p>&copy; 2026 Aulia Cake Cookies. Bersertifikasi Halal.</p>
+            </footer>
+        </aside>
+
+        <!-- Main Workspace: Chatbot UI -->
+        <main class="chat-workspace">
+            <!-- Mobile Header -->
+            <header class="mobile-bar">
+                <button class="menu-toggle" id="menu-toggle-btn" aria-label="Toggle Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="mobile-brand-title">Aulia Cake Cookies</div>
+                <div class="mobile-status-dot"></div>
+            </header>
+
+            <!-- Chat Space Header -->
+            <header class="chat-header">
+                <div class="header-avatar">
+                    <span class="avatar-emoji">👨‍🍳</span>
+                    <div class="status-pulse"></div>
+                </div>
+                <div class="header-details">
+                    <h2 class="assistant-name">Asisten Virtual Aulia</h2>
+                    <p class="assistant-status">Online • Sedia membantu pesanan Anda 🍰</p>
+                </div>
+                <button class="clear-chat-btn" id="clear-btn" title="Bersihkan Percakapan">
+                    <i data-lucide="rotate-ccw"></i> Reset
+                </button>
+            </header>
+
+            <!-- Messages Screen -->
+            <div class="messages-container" id="messages-box">
+                <!-- Welcome Card -->
+                <div class="welcome-card" id="welcome-card">
+                    <div class="welcome-logo">🍩</div>
+                    <h3 class="welcome-title">Selamat datang di Aulia Cake Cookies!</h3>
+                    <p class="welcome-desc">
+                        Halo Kak! Saya adalah asisten virtual Aulia Cake Cookies. Ada yang bisa saya bantu hari ini? Hubungi saya untuk bertanya tentang kue kering signature, kue basah harian, hampers hari raya, atau snack box rapat.
+                    </p>
+                    <div class="quick-chip-grid">
+                        <button class="quick-chip" data-prompt="Apa saja kue kering signature di Aulia Cake Cookies?">
+                            🍪 Kue Kering Andalan
+                        </button>
+                        <button class="quick-chip" data-prompt="Berapa budget minimal untuk memesan Custom Snack Box rapat?">
+                            📦 Info Snack Box Rapat
+                        </button>
+                        <button class="quick-chip" data-prompt="Bagaimana cara memesan hampers Lebaran dan bagaimana pengirimannya?">
+                            🎁 Pemesanan Hampers
+                        </button>
+                        <button class="quick-chip" data-prompt="Bolehkah saya meminta alamat lengkap dan info contact WhatsApp?">
+                            📍 Alamat & No WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Messages area -->
+                <div id="messages-list"></div>
+
+                <!-- Typing Indicator (Hidden by default) -->
+                <div class="typing-indicator" id="typing-indicator" style="display: none;">
+                    <div class="bot-avatar">👩‍🍳</div>
+                    <div class="bubble typing-bubble">
+                        <span>Aulia sedang menyiapkan jawaban</span>
+                        <div class="bounce-dots">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input area -->
+            <footer class="chat-footer">
+                <form id="chat-form" class="chat-form">
+                    <input 
+                        type="text" 
+                        id="chat-input" 
+                        placeholder="Ketik pertanyaan Anda tentang kue lezat kami di sini..." 
+                        autocomplete="off" 
+                        required>
+                    <button type="submit" class="send-btn" id="send-button" aria-label="Kirim Pesan">
+                        <i data-lucide="send"></i>
+                    </button>
+                </form>
+                <div class="footer-note">
+                    Biasanya merespons seketika • Kue buatan tangan, resep rumahan yang autentik ❤️
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
